@@ -10,51 +10,54 @@
     <h4>UserProfile</h4>
     <hr />
     <dl class="row list-group list-group-item">
-        <dt class="col-sm-2">
-            @Html.DisplayNameFor(model => model.UserProfileId)
-        </dt>
-        <dd class = "col-sm-10">
-            @Model.UserProfileId
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.FullName)
-        </dt>
-        <dd class = "col-sm-10">
-            @Model.FullName
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.Email)
-        </dt>
-        <dd class = "col-sm-10">
-            @Model.Email
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.PhoneNumber)
-        </dt>
-        <dd class = "col-sm-10">
-            @Model.PhoneNumber
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.ImageUrl)
-        </dt>
-        <dd class = "col-sm-10">
-            <img src="@Model.ImageUrl" alt="User's profile picture'">
-        </dd>
-        <dt class = "col-sm-2">
-            @Html.DisplayNameFor(model => model.GitHubUrl)
-        </dt>
-        <dd class = "col-sm-10">
-            <a href="@Model.GitHubUrl">@Model.GitHubUrl</a>
+        <div class="list-group-item">
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.FullName)
+            </dt>
+            <div class="tooltip col-sm-2">
+                <p1>@Model.FullName</p1>
+                <span class="tooltiptext ">ProfileID: @Model.UserProfileId</span>
+            </div>
+        </div>
+        <div class="list-group-item">
+            <dt class = "col-sm-2">
+                @Html.DisplayNameFor(model => model.Email)
+            </dt>
+            <dd class = "col-sm-10">
+                @Model.Email
+            </dd>
+            <dt class = "col-sm-2">
+                @Html.DisplayNameFor(model => model.PhoneNumber)
+            </dt>
+            <dd class = "col-sm-10">
+                @Model.PhoneNumber
+            </dd>
+        </div>
+        <div class="list-group-item">
+            <dt class = "col-sm-2">
+                @Html.DisplayNameFor(model => model.ImageUrl)
+            </dt>
+            <dd class = "col-sm-10">
+                <img src="@Model.ImageUrl" alt="User's profile picture'">
+            </dd>
+            <dt class = "col-sm-2">
+                @Html.DisplayNameFor(model => model.GitHubUrl)
+            </dt>
+            <dd class = "col-sm-10">
+                <a href="@Model.GitHubUrl">@Model.GitHubUrl</a>
             
-        </dd>
-        <dt>Skilled Languages</dt>
-        <dd>
-            <ul>
-                @foreach(string languageSkill in Model.SkilledLanguages)
-                {
-                    <li>@languageSkill</li>
-                }
-            </ul>
-        </dd>
+            </dd>
+        </div>
+        <div class="list-group-item">
+            <dt>Skilled Languages</dt>
+            <dd>
+                <ul>
+                    @foreach(string languageSkill in Model.SkilledLanguages)
+                    {
+                        <li>@languageSkill</li>
+                    }
+                </ul>
+            </dd>
+        </div>
     </dl>
 </div>
